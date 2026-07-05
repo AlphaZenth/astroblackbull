@@ -1,24 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AstroSite } from "@/components/site/AstroSite";
+import bannerAsset from "@/assets/astrobanner.jpeg.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: AstroSite,
+  head: () => ({
+    meta: [
+      { title: "ASTRO BLACK BULL | The Bull Continues the Mission" },
+      {
+        name: "description",
+        content:
+          "The Black Bull started the run. Astro Black Bull continues the mission — a Solana memecoin on a moon mission across the galaxy.",
+      },
+      {
+        property: "og:title",
+        content: "ASTRO BLACK BULL | The Bull Continues the Mission",
+      },
+      {
+        property: "og:description",
+        content:
+          "The Black Bull started the run. Astro Black Bull continues the mission.",
+      },
+      { property: "og:image", content: bannerAsset.url },
+      { property: "og:url", content: "/" },
+      { name: "twitter:image", content: bannerAsset.url },
+      { name: "twitter:title", content: "ASTRO BLACK BULL" },
+      {
+        name: "twitter:description",
+        content: "The Bull Continues the Mission.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
