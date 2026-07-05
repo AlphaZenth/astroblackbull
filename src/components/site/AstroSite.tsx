@@ -22,7 +22,7 @@ import { CursorLight } from "@/components/CursorLight";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { Button } from "@/components/ui/button";
 
-const CONTRACT = "SOON";
+const CONTRACT = "HvR2xoH6Ejd4RCRHg9LnPtyWnzjxh8XVg1KzgpTspump";
 const TWITTER = "https://x.com/AstroBlackBull";
 
 const NAV = [
@@ -101,12 +101,14 @@ function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#buy"
-            className="group hidden items-center gap-2 rounded-full bg-white px-5 py-2 text-xs font-bold uppercase tracking-widest text-black transition-all hover:bg-white/90 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] sm:flex"
-          >
-            Buy $ANSTRO
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </a>
+              href="https://pump.fun/coin/HvR2xoH6Ejd4RCRHg9LnPtyWnzjxh8XVg1KzgpTspump"
+              target="_blank"
+              rel="noreferrer"
+              className="group hidden items-center gap-2 rounded-full bg-white px-5 py-2 text-xs font-bold uppercase tracking-widest text-black transition-all hover:bg-white/90 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] sm:flex"
+            >
+              Buy $ANSTRO
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </a>
           <button
             onClick={() => setOpen((v) => !v)}
             className="rounded-full border border-white/10 p-2 md:hidden"
@@ -226,13 +228,15 @@ function Hero() {
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <a
-              href="#buy"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-7 py-4 text-sm font-bold uppercase tracking-widest text-black transition-all hover:shadow-[0_0_50px_rgba(255,255,255,0.5)]"
-            >
-              <Rocket className="h-4 w-4" />
-              Buy $ANSTRO
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
-            </a>
+            href="https://pump.fun/coin/HvR2xoH6Ejd4RCRHg9LnPtyWnzjxh8XVg1KzgpTspump"
+            target="_blank"
+            rel="noreferrer"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-7 py-4 text-sm font-bold uppercase tracking-widest text-black transition-all hover:shadow-[0_0_50px_rgba(255,255,255,0.5)]"
+          >
+            <Rocket className="h-4 w-4" />
+            Buy $ANSTRO
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+          </a>
             <a
               href={TWITTER}
               target="_blank"
@@ -641,20 +645,22 @@ function BuySection() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="https://pump.fun"
+            href="https://pump.fun/coin/HvR2xoH6Ejd4RCRHg9LnPtyWnzjxh8XVg1KzgpTspump"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-black transition-all hover:shadow-[0_0_60px_rgba(255,255,255,0.6)]"
+          >
+            <Rocket className="h-4 w-4" />
+            Buy on pump.fun
+          </a>
+              <a
+                href="https://dexscreener.com/solana/ebnxaievzpneh1pfi1b6mgsybxqqy9nsp6mmkrhfkqzs"
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-black transition-all hover:shadow-[0_0_60px_rgba(255,255,255,0.6)]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-6 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur transition-all hover:border-white/40 hover:bg-white/10"
               >
-                <Rocket className="h-4 w-4" />
-                Buy on pump.fun
+                $ANSTRO CHART
               </a>
-              <Button
-                variant="outline"
-                className="rounded-full border-white/20 bg-white/5 px-8 py-6 text-sm font-bold uppercase tracking-widest hover:bg-white/10"
-              >
-                Connect Wallet
-              </Button>
             </div>
           </div>
         </motion.div>
