@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AstroSite } from "@/components/site/AstroSite";
-import bannerAsset from "@/assets/astrobanner.jpeg.asset.json";
+import bannerAsset from "@/assets/astrobanner.jpeg";
 
 export const Route = createFileRoute("/")({
   component: AstroSite,
@@ -21,9 +21,9 @@ export const Route = createFileRoute("/")({
         content:
           "The Black Bull started the run. Astro Black Bull continues the mission.",
       },
-      { property: "og:image", content: bannerAsset.url },
+      { property: "og:image", content: bannerAsset },
       { property: "og:url", content: "/" },
-      { name: "twitter:image", content: bannerAsset.url },
+      { name: "twitter:image", content: bannerAsset },
       { name: "twitter:title", content: "ASTRO BLACK BULL" },
       {
         name: "twitter:description",

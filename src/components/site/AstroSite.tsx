@@ -14,8 +14,8 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import logo from "@/assets/astrologo.jpeg.asset.json";
-import banner from "@/assets/astrobanner.jpeg.asset.json";
+import logo from "@/assets/astrologo.jpeg";
+import banner from "@/assets/astrobanner.jpeg";
 import { StarField } from "@/components/StarField";
 import { Meteors } from "@/components/Meteors";
 import { CursorLight } from "@/components/CursorLight";
@@ -77,7 +77,7 @@ function Navbar() {
       >
         <a href="#home" className="flex items-center gap-2.5">
           <img
-            src={logo.url}
+            src={logo}
             alt=""
             className="h-9 w-9 rounded-full object-cover ring-1 ring-white/20"
           />
@@ -175,7 +175,7 @@ function Hero() {
         className="absolute inset-0 -z-10"
       >
         <img
-          src={banner.url}
+          src={banner}
           alt=""
           className="h-full w-full object-cover opacity-70"
         />
@@ -253,7 +253,7 @@ function Hero() {
             <div className="relative">
               <div className="absolute inset-0 -z-10 rounded-full bg-white/10 blur-3xl" />
               <img
-                src={logo.url}
+                src={logo}
                 alt="Astro Black Bull mascot"
                 className="mx-auto aspect-square w-full max-w-md rounded-full object-cover shadow-[0_0_100px_rgba(255,255,255,0.15)] ring-1 ring-white/20"
               />
@@ -347,7 +347,7 @@ function About() {
         >
           <div className="absolute inset-0 -z-10 rounded-3xl bg-white/5 blur-2xl" />
           <img
-            src={logo.url}
+            src={logo}
             alt="Astro Black Bull on the moon"
             className="w-full rounded-3xl object-cover shadow-[var(--shadow-elevated)] ring-1 ring-white/10"
           />
@@ -668,7 +668,7 @@ function Community() {
   return (
     <section id="community" className="relative overflow-hidden py-32">
       <div className="absolute inset-0 -z-10">
-        <img src={banner.url} alt="" className="h-full w-full object-cover opacity-25" />
+        <img src={banner} alt="" className="h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
       </div>
       <StarField density={100} />
@@ -684,7 +684,7 @@ function Community() {
           >
             <div className="absolute inset-0 -z-10 rounded-full bg-white/10 blur-3xl" />
             <img
-              src={logo.url}
+              src={logo}
               alt="Astro Black Bull"
               className="mx-auto aspect-square w-full max-w-sm rounded-full object-cover ring-1 ring-white/20"
             />
@@ -740,7 +740,7 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex items-center gap-3">
           <img
-            src={logo.url}
+            src={logo}
             alt=""
             className="h-10 w-10 rounded-full object-cover ring-1 ring-white/20"
           />

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/astrologo.jpeg.asset.json";
+import logo from "@/assets/astrologo.jpeg";
 import { StarField } from "./StarField";
 
 export function LoadingScreen() {
@@ -32,7 +32,7 @@ export function LoadingScreen() {
         >
           <StarField density={120} />
           <motion.img
-            src={logo.url}
+            src={logo}
             alt="Astro Black Bull"
             initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
